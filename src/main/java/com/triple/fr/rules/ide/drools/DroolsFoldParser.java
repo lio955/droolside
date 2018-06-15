@@ -30,17 +30,15 @@ public class DroolsFoldParser implements FoldParser {
         try {
             for (int line = 0; line < lineCount; line++) {
 
-                textArea.
+               // textArea.
                 Token t = textArea.getTokenListForLine(line);
                 while (t != null && t.isPaintable()) {
 
-                    if ("rule".equals(new String(t.getTextArray()))) {
 
+                    if ("rule".equals(t.getLexeme())) {
                         currentFold = new Fold(FoldType.CODE, textArea, t.getOffset());
-                        logger.info("rule");
                     }
-                    if ("end".equals(new String(t.getTextArray()))) {
-                        logger.info("end");
+                    if ("end".equals(t.getLexeme())) {
                         currentFold.setEndOffset(t.getOffset());
                         folds.add(currentFold);
                     }
