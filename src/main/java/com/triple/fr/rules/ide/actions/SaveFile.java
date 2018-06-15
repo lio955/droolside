@@ -1,4 +1,15 @@
 package com.triple.fr.rules.ide.actions;
 
-public class SaveFile {
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+
+public class SaveFile extends AbstractAction {
+    public SaveFile() {
+        super("Save file");
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+        
+    }
 }
