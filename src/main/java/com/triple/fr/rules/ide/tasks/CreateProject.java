@@ -1,20 +1,21 @@
 package com.triple.fr.rules.ide.tasks;
 
-import javax.swing.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class CreateProject extends SwingWorker {
-    @Override
-    protected Object doInBackground() throws Exception {
-        Path path = Paths.get("/home/lionel/scenario/input");
-        Files.createDirectories(path);
-        return null;
+public class CreateProject {
+
+    private String folderName;
+
+    public CreateProject(String folderName) {
+        this.folderName = folderName;
     }
 
-    @Override
-    protected void done() {
-        super.done();
+    public void execute() throws Exception {
+        Path path = Paths.get(folderName);
+        Files.createDirectories(path);
+        Files.
     }
+
 }

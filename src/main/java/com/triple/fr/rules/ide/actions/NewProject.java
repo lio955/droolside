@@ -13,6 +13,7 @@ public class NewProject extends AbstractAction {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        ( Project.getInstance()).setVisible(true);
+        Project.getInstance().setVisible(true);
+
     }
 }

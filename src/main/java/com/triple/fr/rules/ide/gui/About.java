@@ -17,7 +17,7 @@ public class About extends JXDialog {
         setLocation(p.x + parentSize.width / 4, p.y + parentSize.height / 4);
         getContentPane().add(new JXPanel());
         getContentPane().setLayout(new MigLayout("wrap 1"));
-        getContentPane().add(new JXLabel("Drools editor"));
+        getContentPane().add(new JXLabel("Drools editor V1.0.0"));
         pack();
         setModal(true);
     }

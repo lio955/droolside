@@ -1,8 +1,8 @@
 package com.triple.fr.rules.ide.gui;
 
 import com.triple.fr.rules.ide.actions.ChooseDirectory;
+import com.triple.fr.rules.ide.actions.SetupProject;
 import com.triple.fr.rules.ide.application.AppDroolsIDE;
-import com.triple.fr.rules.ide.actions.CreateProject;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.swingx.JXButton;
 import org.jdesktop.swingx.JXLabel;
@@ -34,7 +34,7 @@ public class Project extends JDialog {
         getContentPane().add(new JXButton(new ChooseDirectory()));
         getContentPane().add(new JXLabel("Name : "));
         getContentPane().add(scenario,"span,grow");
-        getContentPane().add(new JXButton(new CreateProject()),"span,grow");
+        getContentPane().add(new JXButton(new SetupProject()), "span,grow");
         pack();
         setModal(true);
     }
