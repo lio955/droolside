@@ -18,10 +18,10 @@ public class SaveFile extends AbstractAction {
     public void actionPerformed(ActionEvent actionEvent) {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Save file");
-        if (fileChooser.showSaveDialog(AppDroolsIDE.getInstance().getMainPanel().getTextArea()) == JFileChooser.APPROVE_OPTION) {
+        if (fileChooser.showSaveDialog(AppDroolsIDE.getInstance().getMainPanel().getCurrentTextArea()) == JFileChooser.APPROVE_OPTION) {
             File file = fileChooser.getSelectedFile();
             try {
-                SaveDRL saveDRL = new SaveDRL(file.getAbsolutePath(), AppDroolsIDE.getInstance().getMainPanel().getTextArea().getText());
+                SaveDRL saveDRL = new SaveDRL(file.getAbsolutePath(), AppDroolsIDE.getInstance().getMainPanel().getCurrentTextArea().getText());
                 saveDRL.execute();
             } catch (Exception e) {
                 ErrorInfo errorInfo = new ErrorInfo("Error saving file", "Cannot save file"
