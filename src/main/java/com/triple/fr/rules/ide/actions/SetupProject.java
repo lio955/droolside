@@ -25,6 +25,6 @@ public class SetupProject extends AbstractAction {
             ActionEvent event = new ActionEvent(errorInfo, 0, e.getMessage());
             (new ShowError()).actionPerformed(event);
         }
-
+        Project.getInstance().setVisible(false);
     }
 }

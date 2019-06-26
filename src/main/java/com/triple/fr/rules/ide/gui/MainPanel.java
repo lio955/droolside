@@ -21,10 +21,12 @@ public class MainPanel extends JXFrame {
         setTitle(TITLE);
         setJMenuBar(new Menu());
         setContentPane(new JXPanel());
-        getContentPane().setLayout(new MigLayout());
+        getContentPane().setLayout(new MigLayout("wrap 1"));
         tabbedPane = new JTabbedPane();
         tabbedPane.addTab("New", new RTextScrollPane(textArea));
         add(tabbedPane);
+        Console console = new Console();
+        add(new JScrollPane(console));
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         pack();

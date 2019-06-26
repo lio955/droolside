@@ -7,7 +7,7 @@ public class CompileProject extends AbstractAction {
 
 
     public CompileProject() {
-        super("Compile project");
+        super("Compile and run");
     }
 
     @Override
